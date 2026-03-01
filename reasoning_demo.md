@@ -116,7 +116,7 @@
 | $A_{4} =$ | $Q \to (Q \to Q)$ | <font color="blue">$\mathcal{A}_{1}$</font> |
 | $A_{5} =$ | $Q \to Q$ | <font color="blue">$A_{3}=A_{4} \to A_{5}$</font> |
 
-### 2.7 $$ \vdash \neg \neg Q \to Q$$
+### 2.7 $$\vdash \neg \neg Q \to Q$$
 
 | 步骤 | 证明过程 | 证据 |
 | :---: | :--- | :--- |
@@ -129,7 +129,7 @@
 | $A_{7} =$ | $\neg \neg Q \to \neg \neg Q$ | <font color="blue">$\vdash Q \to Q$</font> |
 | $A_{8} =$ | $\neg \neg Q \to Q$ | <font color="blue">$A_{6} = A_{7} \to A_{8}$</font> |
 
-### 2.8 $ \vdash Q \to \neg \neg Q$
+### 2.8 $\vdash Q \to \neg \neg Q$
 
 | 步骤 | 证明过程 | 证据 |
 | :---: | :--- | :--- |
@@ -139,7 +139,7 @@
 
 > 借助2.7和2.8说明一个注意点：形式证明里的否定符号不能随意的添加或删减，与语义证明不相同。
 
-### 2.9 $ \vdash (\neg \neg Q \to \neg \neg R) \to (Q \to R)$
+### 2.9 $\vdash (\neg \neg Q \to \neg \neg R) \to (Q \to R)$
 
 | 步骤 | 证明过程 | 证据 |
 | :---: | :--- | :--- |
