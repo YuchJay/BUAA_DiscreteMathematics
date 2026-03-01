@@ -86,7 +86,7 @@
 
 > 上面的做法仅限于我们已知2.3结论的情况下，考试时如果要证明需要完整复现2.2和2.3的证明过程。不过鉴于2.2证明过程较长一般会直接给出，此时写全2.3证明过程即可。
 
-### 2.5 $ \vdash ((P \to Q) \to (P \to R)) \to (P \to (Q \to R))$ ($\mathcal{A}_2$的逆命题)
+### 2.5 $$ \vdash ((P \to Q) \to (P \to R)) \to (P \to (Q \to R))$$ ($\mathcal{A}_2$的逆命题)
 
 <font color="red">**分析：**</font>
 看到 $(P \to (Q \to R))$ 要想到换前，即证 $((P \to Q) \to (P \to R)) \to (Q \to (P \to R))$，注意到两者拥有相同的后件，且前件结构类似 $Q \to (P \to Q)$ ,容易想到用 $\mathcal{A}_2$ 的推论构造 $((P \to Q) \to (P \to R)) \to ((Q \to (P \to Q)) \to (Q \to (P \to R)))$ ,此时再用一次换前即可证明。本质也就是定理 2.4 的证明过程。
@@ -103,7 +103,7 @@
 | $A_{8} =$ | $(Q \to (P \to R)) \to (P \to (Q \to R))$ | <font color="blue">$\begin{aligned} \vdash (P \to (Q \to R )) \\ \to (Q \to ( P \to R )) \end{aligned}$</font> |
 | $A_{9} =$ | $((P \to Q) \to (P \to R)) \to (P \to (Q \to R))$ | <font color="blue">$A_{7},A_{8} \vdash A_{9}$</font> |
 
-### 2.6 $\vdash Q \to Q$ (非常重要的结论)
+### 2.6 $$\vdash Q \to Q$$ (非常重要的结论)
 
 <font color="red">**分析：**</font>
 借助本题希望大家掌握一些基本的构造思想。首先看到一个结论，如果前件和后件的结构均不能与公理中的某个部分产生联系，则把整个部分作为后件来构造。自然的想到 $Q \to (Q \to Q)$ （$\mathcal{A}_{1}$的变形），此时虽然后件得到了我们想要的形式，但是前件依然无从下手,继续延续嵌套构造的思路。注意到 $Q \to (Q \to Q)$ 和 $Q \to Q$ 拥有相同的前件，尝试用 $\mathcal{A}_{2}$ 拼凑，得到 $Q \to ((Q \to Q) \to Q)$ ,根据 $\mathcal{A}_{1}$ 则证明完毕。
@@ -116,7 +116,7 @@
 | $A_{4} =$ | $Q \to (Q \to Q)$ | <font color="blue">$\mathcal{A}_{1}$</font> |
 | $A_{5} =$ | $Q \to Q$ | <font color="blue">$A_{3}=A_{4} \to A_{5}$</font> |
 
-### 2.7 $ \vdash \neg \neg Q \to Q$
+### 2.7 $$ \vdash \neg \neg Q \to Q$$
 
 | 步骤 | 证明过程 | 证据 |
 | :---: | :--- | :--- |
