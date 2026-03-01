@@ -169,8 +169,8 @@
 > **答：** $\mathcal{A}_3$ 中前件携带 $\neg$ 而后件不携带，推理过程中相当于对“$\neg$”做减法，而本命题前件本就不携带 $\neg$ ，不满足 $\mathcal{A}_3$ 的使用条件，故不能直接使用 $\mathcal{A}_3$ 进行证明。
 
 ### 2.11 
-```math
-\vdash (Q \to R) \to (\neg R \to \neg Q) ($\mathcal{A}_3$的逆命题)
+
+$\vdash (Q \to R) \to (\neg R \to \neg Q)$ ($\mathcal{A}_3$的逆命题)
 
 | 步骤 | 证明过程 | 证据 |
 | :---: | :--- | :--- |
