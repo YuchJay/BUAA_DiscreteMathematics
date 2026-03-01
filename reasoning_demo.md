@@ -86,7 +86,7 @@
 
 > 上面的做法仅限于我们已知2.3结论的情况下，考试时如果要证明需要完整复现2.2和2.3的证明过程。不过鉴于2.2证明过程较长一般会直接给出，此时写全2.3证明过程即可。
 
-### 2.5 $$ \vdash ((P \to Q) \to (P \to R)) \to (P \to (Q \to R))$$ ($\mathcal{A}_2$的逆命题)
+### 2.5 $$\vdash ((P \to Q) \to (P \to R)) \to (P \to (Q \to R))$$ ($\mathcal{A}_2$的逆命题)
 
 <font color="red">**分析：**</font>
 看到 $(P \to (Q \to R))$ 要想到换前，即证 $((P \to Q) \to (P \to R)) \to (Q \to (P \to R))$，注意到两者拥有相同的后件，且前件结构类似 $Q \to (P \to Q)$ ,容易想到用 $\mathcal{A}_2$ 的推论构造 $((P \to Q) \to (P \to R)) \to ((Q \to (P \to Q)) \to (Q \to (P \to R)))$ ,此时再用一次换前即可证明。本质也就是定理 2.4 的证明过程。
