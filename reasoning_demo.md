@@ -147,7 +147,7 @@
 | $A_{2} =$ | $(\neg R \to \neg Q) \to (Q \to R) $ | <font color="blue">$\mathcal{A}_3$</font> |
 | $A_{3} =$ | $(\neg \neg Q \to \neg \neg R) \to (Q \to R)$ | <font color="blue">$A_{1},A_{2}\vdash A_{3}$</font> |
 
-### 2.10 $ \vdash (Q \to R) \to (\neg \neg Q \to \neg \neg R)$
+### 2.10 $\vdash (Q \to R) \to (\neg \neg Q \to \neg \neg R)$
 
 <font color="red">**分析：**</font>
 前件和后件都是双变量，无法直观建立联系，考虑一个桥梁连接两者。此处有两种思路。第一种是构造 $\neg \neg Q \to R$ ，希望分别证明 $(Q \to R) \to (\neg \neg Q \to R)$ 和 $(\neg \neg Q \to R) \to (\neg \neg Q \to \neg \neg R)$ 。前者识别出 2.4 的结构，构造 $\neg \neg Q \to Q$ ，易证。后者为 $\mathcal{A}_2$ 的变形，构造 $R \to \neg \neg R$ ，易证。
@@ -168,9 +168,7 @@
 > **延伸思考：** 为什么本命题不可像2.9一样使用 $\mathcal{A}_3$ 直接证明？
 > **答：** $\mathcal{A}_3$ 中前件携带 $\neg$ 而后件不携带，推理过程中相当于对“$\neg$”做减法，而本命题前件本就不携带 $\neg$ ，不满足 $\mathcal{A}_3$ 的使用条件，故不能直接使用 $\mathcal{A}_3$ 进行证明。
 
-### 2.11 
-
-$\vdash (Q \to R) \to (\neg R \to \neg Q)$ ($\mathcal{A}_3$的逆命题)
+### 2.11 $\vdash (Q \to R) \to (\neg R \to \neg Q)$ ($\mathcal{A}_3$的逆命题)
 
 | 步骤 | 证明过程 | 证据 |
 | :---: | :--- | :--- |
@@ -178,7 +176,7 @@ $\vdash (Q \to R) \to (\neg R \to \neg Q)$ ($\mathcal{A}_3$的逆命题)
 | $A_{2} =$ | $(\neg \neg Q \to \neg \neg R) \to (\neg R \to \neg Q)$ | <font color="blue">$\mathcal{A}_3$</font> |
 | $A_{3} =$ | $(Q \to R) \to (\neg R \to \neg Q)$ | <font color="blue">$A_{1},A_{2} \vdash A_{3}$</font> |
 
-### 2.12 $ \vdash ( \neg Q \to R ) \to (\neg R \to Q)$
+### 2.12 $\vdash ( \neg Q \to R ) \to (\neg R \to Q)$
 
 <font color="red">**分析：**</font>
 仍旧是熟悉的双变量，熟悉的构造桥梁。单个否定我们不容易得到好性质，但是两个否定就可以通过双重否定律直接传递。恰好我们将某一个变量前的否定号变成一致后另一个变量前面恰好差两个否定符号，由此入手。
@@ -193,7 +191,7 @@ $\vdash (Q \to R) \to (\neg R \to \neg Q)$ ($\mathcal{A}_3$的逆命题)
 | $A_{6} =$ | $( \neg Q \to R ) \to (\neg R \to \neg \neg Q)$ | <font color="blue">$\vdash (Q \to R) \to (\neg R \to \neg Q)$</font> |
 | $A_{7} =$ | $( \neg Q \to R ) \to (\neg R \to Q)$ | <font color="blue">$A_{6},A_{5} \vdash A_{7}$</font> |
 
-### 2.13 $ \vdash (Q \to \neg R) \to (R \to \neg Q)$
+### 2.13 $\vdash (Q \to \neg R) \to (R \to \neg Q)$
 
 | 步骤 | 证明过程 | 证据 |
 | :---: | :--- | :--- |
@@ -203,7 +201,7 @@ $\vdash (Q \to R) \to (\neg R \to \neg Q)$ ($\mathcal{A}_3$的逆命题)
 | $A_{4} =$ | $(Q \to \neg R) \to (\neg \neg R \to \neg Q) $ | <font color="blue">$\vdash (Q \to R) \to (\neg R \to \neg Q)$</font> |
 | $A_{5} =$ | $(Q \to \neg R) \to (R \to \neg Q)$ | <font color="blue">$A_{4},A_{3}\vdash A_{5}$</font> |
 
-### 2.14 $ \vdash \neg Q \to (Q \to R)$
+### 2.14 $\vdash \neg Q \to (Q \to R)$
 
 | 步骤 | 证明过程 | 证据 |
 | :---: | :--- | :--- |
@@ -211,7 +209,7 @@ $\vdash (Q \to R) \to (\neg R \to \neg Q)$ ($\mathcal{A}_3$的逆命题)
 | $A_{2} =$ | $(\neg R \to \neg Q)\to (Q \to R)$ | <font color="blue">$\mathcal{A}_3$</font> |
 | $A_{3} =$ | $\neg Q \to (Q \to R)$ | <font color="blue">$A_{1},A_{2}\vdash A_{3}$</font> |
 
-### 2.15 $ \vdash (\neg Q \to Q) \to (R \to Q)$
+### 2.15 $\vdash (\neg Q \to Q) \to (R \to Q)$
 
 <font color="red">**分析：**</font>
 从形式来看这个 $R$ 非常奇怪，像是凭空产生的一样，此时我们需要考虑能够引入新公式的定理。现有的引入新公式的定理只有公理系统的三个公理，主要为公理 $\mathcal{A}_1$ 。同时考虑与前件产生联系，先尝试 $(\neg Q \to \neg R)\to (R \to Q)$ ,那么转变为证明 $(\neg Q \to Q) \to (\neg Q \to \neg R)$ ，这个式子的前件即为 $\neg Q \to(Q \to \neg R)$ ，到这一步已经非常显然，由 $\neg Q \to (\neg \neg R \to \neg Q)$ 与 $(\neg \neg R \to \neg Q)\to (Q \to \neg R)$ ，证毕。
@@ -239,7 +237,7 @@ $\vdash (Q \to R) \to (\neg R \to \neg Q)$ ($\mathcal{A}_3$的逆命题)
 | $A_{4} =$ | $(\neg Q \to Q) \to (\neg Q \to Q)$ | <font color="blue">$\vdash Q \to Q$</font> |
 | $A_{5} =$ | $(\neg Q \to Q) \to Q$ | <font color="blue">$A_{3}=A_{4} \to A_{5}$</font> |
 
-### 2.17 $ \vdash Q \vee Q \to Q$
+### 2.17 $\vdash Q \vee Q \to Q$
 
 遇到此类问题一定要用“字符串”的恒等变形。即证 $(\neg Q \to Q)\to Q$ 。
 
@@ -248,7 +246,7 @@ $\vdash (Q \to R) \to (\neg R \to \neg Q)$ ($\mathcal{A}_3$的逆命题)
 | $A_{1} =$ | $(\neg Q \to Q) \to Q$ | <font color="blue">$\vdash (\neg Q \to Q) \to Q$</font> |
 | $A_{2} =$ | $Q \vee Q \to Q$ | <font color="blue">$Q \vee R \equiv (\neg Q \to R)$</font> |
 
-### 2.18 $ \vdash \neg(Q \wedge \neg Q)$
+### 2.18 $\vdash \neg(Q \wedge \neg Q)$
 
 即证 $\neg \neg (Q \to \neg \neg Q)$ 。
 
@@ -259,7 +257,7 @@ $\vdash (Q \to R) \to (\neg R \to \neg Q)$ ($\mathcal{A}_3$的逆命题)
 | $A_{3} =$ | $\neg \neg (Q \to \neg \neg Q)$ | <font color="blue">$A_{2}=A_{1} \to A_{3}$</font> |
 | $A_{4} =$ | $\neg(Q \wedge \neg Q)$ | <font color="blue">$Q \wedge R \equiv \neg (Q \to \neg R)$</font> |
 
-### 2.19 $ \vdash (Q \to R) \vee (R \to Q)$
+### 2.19 $\vdash (Q \to R) \vee (R \to Q)$
 
 <font color="red">**分析：**</font>
 即证 $\neg (Q \to R) \to (R \to Q)$ 。由于不可随意地拆解否定符号和括号，所以 $\neg (Q \to R)$ 只能看作一个整体。
@@ -292,7 +290,7 @@ $\vdash (Q \to R) \to (\neg R \to \neg Q)$ ($\mathcal{A}_3$的逆命题)
 | $A_{5} =$ | $\neg (Q \to R) \to (R \to Q)$ | <font color="blue">$A_{3} ,A_{4} \vdash A_{5}$</font> |
 | $A_{6} =$ | $(Q \to R) \vee (R \to Q)$ | <font color="blue">$Q \vee R \equiv \neg Q \to R$</font> |
 
-### 2.20 $ \vdash (Q \to R) \to (Q \to \neg R)$
+### 2.20 $\vdash (Q \to R) \to (Q \to \neg R)$
 
 <font color="red">**分析：**</font>
 即证 $\neg (Q \to R) \to (Q \to \neg R)$ 。由2.19的法二易知构造 $\neg R$ 即可，不再赘述。
@@ -308,7 +306,7 @@ $\vdash (Q \to R) \to (\neg R \to \neg Q)$ ($\mathcal{A}_3$的逆命题)
 | $A_{5} =$ | $\neg (Q \to R) \to (Q \to \neg R)$ | <font color="blue">$A_{3},A_{4} \vdash A_{5}$</font> |
 | $A_{6} =$ | $(Q \to R) \to (Q \to \neg R)$ | <font color="blue">$Q \vee R \equiv \neg Q \to R$</font> |
 
-### 2.21 $ \vdash Q \to ((Q \to R) \to R)$
+### 2.21 $\vdash Q \to ((Q \to R) \to R)$
 
 <font color="red">**分析：**</font>
 注意到换前的形式，容易证明。
@@ -321,7 +319,7 @@ $\vdash (Q \to R) \to (\neg R \to \neg Q)$ ($\mathcal{A}_3$的逆命题)
 | $A_{2} =$ | $((Q \to R)\to (Q \to R)) \to (Q \to ((Q \to R) \to R))$ | <font color="blue">$\vdash (P \to (Q \to R)) \to (Q \to (P \to R))$</font> |
 | $A_{3} =$ | $Q \to ((Q \to R) \to R)$ | <font color="blue">$A_{1},A_{2} \vdash A_{3}$</font> |
 
-### 2.22 $ \vdash Q \wedge (Q \to R) \to R$
+### 2.22 $\vdash Q \wedge (Q \to R) \to R$
 
 <font color="red">**分析：**</font>
 即证 $\neg (Q \to \neg(Q \to R)) \to R$ 。由于前件结构过于复杂，考虑消解掉否定号来简化结构。考虑证明 $\neg R \to (Q \to \neg(Q \to R))$ ,再通过换前使带否定号的结构全部处于后件中便于共同消去，即证 $Q \to (\neg R \to \neg (Q \to R))$ ，只要证 $Q \to ((Q \to R) \to R)$ 。此时已经非常显然，即使没有2.21的证明也只需要一步换前即可证毕。
@@ -339,7 +337,7 @@ $\vdash (Q \to R) \to (\neg R \to \neg Q)$ ($\mathcal{A}_3$的逆命题)
 | $A_{7} =$ | $\neg (Q \to \neg(Q \to R)) \to R$ | <font color="blue">$A_{6}=A_{5} \to A_{7}$</font> |
 | $A_{8} =$ | $Q \wedge (Q \to R) \to R$ | <font color="blue">$Q \vee R \equiv \neg Q \to R$</font> |
 
-### 2.23 $ \vdash (\neg Q \to R) \to ((\neg Q \to \neg R) \to Q)$
+### 2.23 $\vdash (\neg Q \to R) \to ((\neg Q \to \neg R) \to Q)$
 
 <font color="red">**分析：**</font>
 注意到对前件做 $(\neg Q \to R)\to (\neg R \to Q)$ 处理，可以得到相同的后件，即证 $(\neg R \to Q)\to((\neg Q \to \neg R) \to Q) $ 。但是结构显然与我们熟悉的不同，因为此时我们需要证的是 $(\neg Q \to \neg R) \to \neg R$ ，说明此路不通。
@@ -374,7 +372,7 @@ $\vdash (Q \to R) \to (\neg R \to \neg Q)$ ($\mathcal{A}_3$的逆命题)
 > 
 > 从这个推理过程反推即可构造不使用演绎定理的证明。
 
-### 2.24 $ \vdash (Q \to R) \to ((Q \to \neg R) \to \neg Q)$
+### 2.24 $\vdash (Q \to R) \to ((Q \to \neg R) \to \neg Q)$
 
 <font color="red">**分析：**</font>
 用演绎定理我们会得到一个奇怪的形式，最后一步需要证明 $\vdash (Q \to \neg Q) \to \neg Q$ 。这个引理需要我们证明，也非常简单，先由 $(\neg Q \to Q) \to Q$ 构造 $(\neg \neg Q \to \neg Q) \to \neg Q$ ，再由 $(Q \to R) \to (\neg R \to \neg Q)$ 构造 $(Q \to \neg Q) \to (\neg \neg Q \to \neg Q)$ ,引理证毕。
@@ -413,14 +411,14 @@ $\vdash (Q \to R) \to (\neg R \to \neg Q)$ ($\mathcal{A}_3$的逆命题)
 | $A_{5} =$ | $(\neg Q \to \neg (R \to \neg \neg R)) \to Q$ | <font color="blue">$A_{3} = A_{4} \to A_{5}$</font> |
 | $A_{6} =$ | $(\neg Q \to R \wedge \neg R) \to Q$ | <font color="blue">$Q \wedge R \equiv \neg (Q \to \neg R)$</font> |
 
-### 2.26 $ \vdash Q \to R \vee Q$
+### 2.26 $\vdash Q \to R \vee Q$
 
 | 步骤 | 证明过程 | 证据 |
 | :---: | :--- | :--- |
 | $A_{1} =$ | $Q \to (\neg R \to Q)$ | <font color="blue">$\mathcal{A}_1$</font> |
 | $A_{2} =$ | $Q \to R \vee Q$ | <font color="blue">$Q \vee R \equiv \neg Q \to R$</font> |
 
-### 2.27 $ \vdash Q \wedge R \to R \wedge Q$
+### 2.27 $\vdash Q \wedge R \to R \wedge Q$
 
 | 步骤 | 证明过程 | 证据 |
 | :---: | :--- | :--- |
@@ -429,7 +427,7 @@ $\vdash (Q \to R) \to (\neg R \to \neg Q)$ ($\mathcal{A}_3$的逆命题)
 | $A_{3} =$ | $\neg (Q \to \neg R) \to \neg (R \to \neg Q)$ | <font color="blue">$A_{2} =A_{1} \to A_{3}$</font> |
 | $A_{4} =$ | $Q \wedge R \to R \wedge Q$ | <font color="blue">$Q \wedge R \equiv \neg (Q \to \neg R)$</font> |
 
-### 2.28 $ \vdash Q \wedge R \to Q$
+### 2.28 $\vdash Q \wedge R \to Q$
 
 | 步骤 | 证明过程 | 证据 |
 | :---: | :--- | :--- |
@@ -440,7 +438,7 @@ $\vdash (Q \to R) \to (\neg R \to \neg Q)$ ($\mathcal{A}_3$的逆命题)
 | $A_{5} =$ | $\neg (Q \to \neg R) \to Q$ | <font color="blue">$A_{4}=A_{3} \to A_{5}$</font> |
 | $A_{6} =$ | $Q \wedge R \to Q$ | <font color="blue">$Q \wedge R \equiv \neg (Q \to \neg R)$</font> |
 
-### 2.29 $ \vdash Q \wedge R \to R$
+### 2.29 $\vdash Q \wedge R \to R$
 
 | 步骤 | 证明过程 | 证据 |
 | :---: | :--- | :--- |
@@ -449,7 +447,7 @@ $\vdash (Q \to R) \to (\neg R \to \neg Q)$ ($\mathcal{A}_3$的逆命题)
 | $A_{3} =$ | $\neg (Q \to \neg R) \to R$ | <font color="blue">$A_{2}=A_{1} \to A_{3}$</font> |
 | $A_{4} =$ | $Q \wedge R \to R$ | <font color="blue">$Q \wedge R \equiv \neg (Q \to \neg R)$</font> |
 
-### 2.30 $ \vdash (P \wedge Q \to R) \to (P \to (Q \to R))$
+### 2.30 $\vdash (P \wedge Q \to R) \to (P \to (Q \to R))$
 
 <font color="red">**分析：**</font>
 即证 $(\neg (P \to \neg Q) \to R)\to (P \to (Q \to R))$ 。先用一次换前,希望证 $P \to ((\neg (P \to \neg Q) \to R) \to (Q \to R))$ ，即只要证 $P \to (Q \to \neg (P \to \neg Q))$ ，只要证 $P \to ((P \to \neg Q) \to \neg Q)$ ，结构显然，证毕。
@@ -467,7 +465,7 @@ $\vdash (Q \to R) \to (\neg R \to \neg Q)$ ($\mathcal{A}_3$的逆命题)
 | $A_{7} =$ | $(P \to ((\neg (P \to \neg Q) \to R) \to (Q \to R))) \to ((\neg (P \to \neg Q) \to R)\to (P \to (Q \to R)))$ | <font color="blue">$\vdash (P \to (Q \to R)) \to (Q \to (P \to R))$</font> |
 | $A_{8} =$ | $(P \wedge Q \to R) \to (P \to (Q \to R))$ | <font color="blue">$Q \wedge R \equiv \neg (Q \to \neg R)$</font> |
 
-### 2.31 $ \vdash Q \to (R \to (Q \wedge R))$
+### 2.31 $\vdash Q \to (R \to (Q \wedge R))$
 
 <font color="red">**分析：**</font>
 即证 $Q \to (R \to \neg (Q \to \neg R))$ ,只要证 $Q \to ((Q \to \neg R) \to \neg R)$ ，显然。
@@ -483,7 +481,7 @@ $\vdash (Q \to R) \to (\neg R \to \neg Q)$ ($\mathcal{A}_3$的逆命题)
 | $A_{5} =$ | $Q \to (R \to \neg (Q \to \neg R))$ | <font color="blue">$A_{3},A_{4} \vdash A_{5}$</font> |
 | $A_{6} =$ | $Q \to (R \to (Q \wedge R))$ | <font color="blue">$Q \wedge R \equiv \neg (Q \to \neg R)$</font> |
 
-### 2.32 $ \vdash Q \to (\neg R \to \neg (Q \to R))$
+### 2.32 $\vdash Q \to (\neg R \to \neg (Q \to R))$
 
 | 步骤 | 证明过程 | 证据 |
 | :---: | :--- | :--- |
@@ -523,7 +521,7 @@ $\vdash (Q \to R) \to (\neg R \to \neg Q)$ ($\mathcal{A}_3$的逆命题)
 
 ## 4. 一阶谓词逻辑公理系统证明实例
 
-### 4.1 $ \vdash \forall x Q(x) \to \forall y Q(y)$ &nbsp;&nbsp;&nbsp; (其中 $y$ 不在 $Q$ 中自由出现)
+### 4.1 $\vdash \forall x Q(x) \to \forall y Q(y)$ &nbsp;&nbsp;&nbsp; (其中 $y$ 不在 $Q$ 中自由出现)
 
 | 步骤 | 证明过程 | 证据 |
 | :---: | :--- | :--- |
@@ -532,7 +530,7 @@ $\vdash (Q \to R) \to (\neg R \to \neg Q)$ ($\mathcal{A}_3$的逆命题)
 | $A_{3} =$ | $\forall y(\forall x Q(x) \to Q(y)) \to (\forall x Q(x) \to \forall y Q(y))$ | <font color="blue">$\mathcal{A}_5$</font> |
 | $A_{4} =$ | $\forall x Q(x) \to \forall y Q(y)$ | <font color="blue">$A_{3}=A_{2} \to A_{4}$</font> |
 
-### 4.2 $ \vdash \exists x Q(x) \to \exists y Q(y)$ &nbsp;&nbsp;&nbsp; (其中 $y$ 不在 $Q$ 中自由出现)
+### 4.2 $\vdash \exists x Q(x) \to \exists y Q(y)$ &nbsp;&nbsp;&nbsp; (其中 $y$ 不在 $Q$ 中自由出现)
 
 | 步骤 | 证明过程 | 证据 |
 | :---: | :--- | :--- |
